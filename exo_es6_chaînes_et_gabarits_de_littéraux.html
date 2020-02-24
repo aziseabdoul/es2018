@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script>
+      function cluedo() {
+        "use strict";
+        const suspect = "le colonel moutarde";
+        const pièce = "la cuisine";
+        const arme = "le chandelier";
+        console.dir(
+          `c'est ${suspect} qui a tué le dr lenoir dans ${pièce} avec ${arme}`
+        );
+      }
+
+      function cluedoAleatoire(n) {
+        const susp = ["suspect1", "suspect2","suspect10","suspect11","suspect12","suspect13","suspect14","suspect15","suspect16","suspect17","suspect18","suspect19"];
+        const pièces = ["pièce1", "pièce2", "pièce20", "pièce21", "pièce22", "pièce23", "pièce24", "pièce25", "pièce26", "pièce27", "pièce28", "pièce29", "pièce200"];
+        const armes = ["arme1", "arme2", "arme30", "arme32", "arme31", "arme33", "arme34", "arme35", "arme36", "arme37", "arme38", "arme39", "arme333", "arme0"];
+
+        const s = susp[Math.floor(Math.random() * n)];
+        const p = pièces[Math.floor(Math.random() * n)];
+        const w = armes[Math.floor(Math.random() * n)];
+
+        console.log(`${s} killed le dr lenoir dans la ${p} avec l'${w}.`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

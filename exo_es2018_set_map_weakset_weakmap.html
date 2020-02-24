@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script>
+      "use strict";
+      const cardType = new Set(["As", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Reine", "Roi", "Valet"]);
+      const cardColor = new Set(["pique", "coeur", "trèfle", "carreau"]);
+
+      const cardGame = new Map([cardType, cardColor]);
+      for (let i = 0; i < cardType.size; i++) {
+        let a = [...cardType][i];
+        let b = [...cardColor][0];
+        console.log(`${a} de ${b}`);
+      }
+      for (let i = 0; i < cardType.size; i++) {
+        let c = [...cardType][i];
+        let d = [...cardColor][1];
+        console.log(`${c} de ${d}`);
+      }
+      for (let i = 0; i < cardType.size; i++) {
+        let e = [...cardType][i];
+        let f = [...cardColor][2];
+        console.log(`${e} de ${f}`);
+      }
+      for (let i = 0; i < cardType.size; i++) {
+        let g = [...cardType][i];
+        let h = [...cardColor][3];
+        console.log(`${g} de ${h}`);
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>

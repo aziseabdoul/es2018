@@ -1,0 +1,68 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class Rectangle {
+             constructor(x1, y1, x2, y2, x3, y3, x4, y4, hauteur, largeur) {
+              this.x1 = x1;
+              this.y1 = y1;
+              this.x2 = x2;
+              this.y2 = y2;
+              this.x3 = x3;
+              this.y3 = y3;
+              this.x4 = x4;
+              this.y4 = y4;
+              this.hauteur = hauteur;
+              this.largeur = largeur;
+            }
+
+            déplacerA(déplacementX, déplacementY) {
+              this.x1 += déplacementX;
+              this.y1 += déplacementY;
+            }
+          }
+
+          const r1 = new Rectangle(1, 4, 7, 4, 7, 1, 1, 1, 5, 10);
+          r1.déplacerA(1, 0);
+          console.log(r1);
+
+          const r2 = new Rectangle(-3, 6, 3, 6, 3, 0, -3, 0, 4, 20);
+          r2.déplacerA(2, -3);
+          console.log(r2);
+
+          var RectangleES5 = (function () {
+            function RectangleES5(x1, y1, x2, y2, x3, y3, x4, y4, hauteur, largeur) {
+              this.x1 = x1;
+              this.y1 = y1;
+              this.x2 = x2;
+              this.y2 = y2;
+              this.x3 = x3;
+              this.y3 = y3;
+              this.x4 = x4;
+              this.y4 = y4;
+              this.hauteur = hauteur;
+              this.largeur = largeur;
+            }
+            
+            RectangleES5.prototype.déplacerA = function (déplacementX, déplacementY) {
+              this.x1 += déplacementX;
+              this.y1 += déplacementY;
+            };
+            return RectangleES5;
+          }());
+          
+          var r3 = new RectangleES5(1, 4, 7, 4, 7, 1, 1, 1, 5, 10);
+          r3.déplacerA(1, 0);
+          console.log(r3);
+
+          var r4 = new RectangleES5(-3, 6, 3, 6, 3, 0, -3, 0, 4, 20);
+          r4.déplacerA(2, -3);
+          console.log(r4);
+
+          console.log(r1.__proto__);
+          console.log(r2.__proto__);
+          console.log(r3.__proto__);
+          console.log(r4.__proto__);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            "use strict";
+            
+            const DeLorean = {
+             nomDeModèle : "DeLorean DMC-12",
+             nombreDeRoues : 4,
+             look : "rétro-futuriste",
+             options : ["portes-papillon", "caisse en fibre de verre"]
+            };
+
+            const myDeLorean = {};
+
+            Object.assign(myDeLorean, DeLorean);
+
+            //console.log(myDeLorean);
+
+            const flyingDeLorean = {
+                canFly : function() {
+                    console.log("I can fly");
+                },
+                canTravelBackInTime : function() {
+                    console.log("I can travel back in time");
+                }
+            };
+
+            Object.assign(flyingDeLorean, myDeLorean);
+
+            console.log(flyingDeLorean);
+        </script>
+    </head>
+    <body></body>
+</html>

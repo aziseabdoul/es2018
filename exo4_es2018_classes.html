@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            class Rectangle {
+             constructor(x1, y1, x2, y2, x3, y3, x4, y4, hauteur, largeur) {
+              this.x1 = x1;
+              this.y1 = y1;
+              this.x2 = x2;
+              this.y2 = y2;
+              this.x3 = x3;
+              this.y3 = y3;
+              this.x4 = x4;
+              this.y4 = y4;
+              this.hauteur = hauteur;
+              this.largeur = largeur;
+            }
+
+            déplacerA(déplacementX, déplacementY) {
+              this.x1 += déplacementX;
+              this.y1 += déplacementY;
+            }
+
+            get gauche() {
+                return Math.sqrt(Math.pow(this.x1, 2) + Math.pow(this.y1, 2));
+            }
+
+            set gauche(newGauche) {
+                if (this.gauche === 0) {
+                return;
+              }
+              this.x1 = this.x1 / this.gauche * newGauche;
+              this.y1 = this.y1 / this.gauche * newGauche;
+            }
+
+            static intersection() {
+                if (r1.droite > r2.gauche && r1.gauche < r2.droite && r1.bas > r2.haut && r1.haut < r2.bas) {
+                                     console.log("chevauchement");
+                                 }
+            }
+          }
+
+          //const r1 = new Rectangle(1, 4, 7, 4, 7, 1, 1, 1, 5, 10);
+
+        </script>
+    </body>
+</html>

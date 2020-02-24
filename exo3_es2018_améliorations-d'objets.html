@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            "use strict";
+            const classeSpé = Object.assign(
+                Object.create({
+                    numSécu: function() {
+                        for (const property in classeSpé) {
+                            console.log(`${classeSpé[property]}`);
+
+                        };
+                        //console.log(Object.values(classeSpé));
+                    },
+                    nom: function() {
+                        for (const property in classeSpé) {
+                            console.log(`je m'appelle ${property} et mon numéro de sécu est ${classeSpé[property]}`);
+
+                        };
+                    }
+                }),
+
+                {
+                    eleve1: 123456789,
+                    eleve16: 987654321
+                }
+            );
+        </script>
+    </head>
+    <body></body>
+</html>
